@@ -33,7 +33,7 @@ const Projects = () => {
               </h2>
               <div className="flex items-center gap-2">
                 {/* <IoLogoGithub className="text-2xl hover:text-blue-700 duration-500 cursor-pointer" /> */}
-                <a href="https://devops.exabyte-eg.com/projects/temry/web/" target="_blank" className="flex items-center gap-2 text-lg hover:text-blue-700 duration-500 cursor-pointer"> <FiExternalLink className="" /> Live Demo </a>
+                <a href="https://devops.exabyte-eg.com/projects/temry/web/" target="_blank" className="flex items-center gap-1.5 text-base hover:text-blue-700 duration-500 cursor-pointer"> <FiExternalLink  /> Live Demo </a>
               </div>
             </div>
             <p className="text-[#8b949e] text-sm pt-1.5">
