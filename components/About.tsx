@@ -13,7 +13,7 @@ const About = () => {
         </p>
 
         <div className="relative border border-gray-700  h-full text-start p-5 rounded-3xl mt-10 flex flex-col md:flex-row justify-between gap-10">
-          <div className="absolute -top-8 -right-5 w-28 h-40  sm:h-40 rounded-full bg-[oklab(0.69_-0.05_-0.18_/_0.2)] filter blur-xl opacity-50 animate-float" />
+          <div className="absolute hidden md:block -top-8 -right-5 w-28 h-40  sm:h-40 rounded-full bg-[oklab(0.69_-0.05_-0.18_/_0.2)] filter blur-xl opacity-50 animate-float" />
 
           <div>
             <h2 className="text-white text-xl md:text-3xl font-bold mb-2.5">
@@ -51,7 +51,7 @@ const About = () => {
           </div>
 
           <div className="flex flex-col gap-5">
-            <div className="border border-[#112B51] p-6 rounded-3xl bg-[#0F1D31] flex flex-col gap-5 size-fit">
+            <div className="border border-[#112B51] p-6 rounded-3xl bg-[#0F1D31] flex flex-col gap-5 ">
               <h4 className="text-white text-xl  font-bold">Team Info</h4>
               <div className="flex items-center gap-3 sm:gap-3.5">
                 <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-700/10 flex items-center justify-center text-sm sm:text-base text-blue-700">
