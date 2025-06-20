@@ -4,7 +4,7 @@ import { cards } from "../data/data";
 const Projects = () => {
   return (
     <section id="projects" className="scroll-mt-28 pt-10 md:pt-20">
-      <div className="w-11/12 mx-auto px-2.5 lg:px-16  pb-12">
+      <div className="w-11/12 mx-auto  lg:px-16  pb-12">
         <div className="text-center">
           <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-bold mb-2.5">
             Our <span className="text-blue-700">Projects</span>
@@ -15,7 +15,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-8 pt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-8  pt-12 w-full lg:w-[80%] md:mx-auto">
           {cards.map((card, index) => (
             <Link
               href={card.hreaf}
