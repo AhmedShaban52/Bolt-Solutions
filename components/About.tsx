@@ -2,17 +2,20 @@ import React from "react";
 import { GiCheckMark } from "react-icons/gi";
 const About = () => {
   return (
-    <section className="w-full  text-gray-900 py-16">
+    <section
+      id="about"
+      className="scroll-mt-28 w-full text-gray-900 lg:pt-5 pb-8 md:pb-20"
+    >
       <div className="text-center">
-        <h1 className="text-white text-xl sm:text-3xl md:text-5xl font-bold mb-2.5">
+        <h1 className="text-white text-2xl md:text-5xl font-bold mb-2.5">
           About <span className="text-blue-700">Us</span>
         </h1>
-        <div className="mx-auto w-56 h-1 bg-gradient-to-r from-blue-700 to-transparent mb-2"></div>
-        <p className="text-xl text-gray-400">
+        <div className="mx-auto w-28  md:w-56 h-1 bg-gradient-to-r from-blue-700 to-transparent mb-2"></div>
+        <p className="text-lg md:text-xl text-gray-400">
           Meet the creative minds behind the code
         </p>
 
-        <div className="relative border border-gray-700  h-full text-start p-5 rounded-3xl mt-10 flex flex-col md:flex-row justify-between gap-10">
+        <div className="relative border border-gray-700  h-full text-start p-5 rounded-3xl mt-8 md:mt-10 flex flex-col md:flex-row justify-between gap-10">
           <div className="absolute hidden md:block -top-8 -right-5 w-28 h-40  sm:h-40 rounded-full bg-[oklab(0.69_-0.05_-0.18_/_0.2)] filter blur-xl opacity-50 animate-float" />
 
           <div>

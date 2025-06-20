@@ -1,64 +1,30 @@
-import React from "react"
-import Image from "next/image";
-import { FiExternalLink } from "react-icons/fi";
-import { projects } from "../data/data";
+import Link from "next/link";
+import { cards } from "../data/data";
 
 const Projects = () => {
   return (
-    <section className="pt-14">
+    <section id="projects" className="scroll-mt-28 pt-10 md:pt-16">
       <div className="text-center">
-        <h1 className="text-white text-xl sm:text-3xl md:text-5xl font-bold mb-2.5">
+        <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-bold mb-2.5">
           Our <span className="text-blue-700">Projects</span>
         </h1>
-        <div className="mx-auto w-80 h-1 bg-gradient-to-r from-blue-700 to-transparent mb-2"></div>
-        <p className="text-xl text-gray-400">
+        <div className="mx-auto w-44 md:w-80 h-1 bg-gradient-to-r from-blue-700 to-transparent mb-2"></div>
+        <p className="text-lg text-gray-400">
           Real results. Real impact. A glimpse into our development journey.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-10">
-        {projects.map((project, index) => (
-          <a
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-8 pt-10">
+        {cards.map((card, index) => (
+          <Link
+            href={card.hreaf}
             key={index}
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block group border border-gray-700 rounded-xl overflow-hidden transition-all duration-500 hover:border-blue-700 hover:shadow-lg"
+            className="flex flex-col items-center text-center p-6 border border-gray-700 rounded-xl shadow-sm transition-all duration-700 ease-in-out hover:shadow-lg hover:border-blue-500 hover:-translate-y-1 cursor-pointer"
           >
-            <div className="overflow-hidden">
-              <Image
-                src={project.image}
-                alt={project.title}
-                className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-
-            <div className="p-4">
-              <div className="flex items-center justify-between">
-                <h2 className="text-xl font-bold text-text-primary">
-                  {project.title}
-                </h2>
-                <div className="flex items-center gap-2">
-                  <span className="flex items-center gap-1.5 text-base text-blue-700">
-                    <FiExternalLink /> Live Demo
-                  </span>
-                </div>
-              </div>
-              <p className="text-[#8b949e] text-sm pt-1.5">
-                {project.description}
-              </p>
-
-              <div className="pt-3 flex flex-wrap gap-2">
-                {project.stack.map((tech, idx) => (
-                  <span
-                    key={idx}
-                    className="text-xs px-3 py-1 rounded-full bg-blue-700/10 text-blue-700"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </a>
+            {card.icon}
+            <h3 className="text-2xl font-semibold mb-2">{card.title}</h3>
+            <p className="text-gray-500">{card.description}</p>
+          </Link>
         ))}
       </div>
     </section>
