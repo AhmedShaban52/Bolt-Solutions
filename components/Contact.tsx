@@ -8,7 +8,7 @@ import { BsSendFill } from "react-icons/bs";
 
 const Contact = () => {
   return (
-    <div className="py-12 sm:py-16 md:py-20 bg-[#0D1117]">
+    <section id="contact" className="scroll-mt-8 py-12 sm:py-16 md:py-20 bg-[#0D1117]">
       <div className="container w-5/6 mx-auto">
         <div className="text-center">
           <h1 className="text-white text-2xl md:text-5xl font-bold mb-2.5">
@@ -101,7 +101,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

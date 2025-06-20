@@ -3,7 +3,7 @@ import { cards } from "../data/data";
 
 const Projects = () => {
   return (
-    <section id="projects" className="scroll-mt-28 pt-10 md:pt-20">
+    <section id="projects" className="scroll-mt-28 pt-10 pb-14 md:pt-20 bg-[#060d1a]">
       <div className="w-11/12 mx-auto  lg:px-16  pb-12">
         <div className="text-center">
           <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-bold mb-2.5">

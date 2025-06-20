@@ -1,10 +1,11 @@
 import React from "react";
 import { GiCheckMark } from "react-icons/gi";
+import { principles } from "../data/data";
 const About = () => {
   return (
     <section
       id="about"
-      className="scroll-mt-28 py-16 sm:py-20 md:py-24 bg-[#0D1117] relative overflow-hidden "
+      className="scroll-mt-28 py-16 sm:py-20 md:py-24 bg-[#111721] relative overflow-hidden "
     >
       <div className="text-center w-11/12 mx-auto px-2.5 lg:px-14 pb-12">
         <div className="absolute top-[-8%] -left-10 w-40 h-96 sm:w-80 sm:h-64 rounded-full bg-blue-500/10  filter blur-2xl opacity-70 animate-float" />
@@ -39,18 +40,15 @@ const About = () => {
                   Coding Principles
                 </h3>
 
-                <p className="flex items-center gap-2 text-base md:text-lg text-gray-600 leading-relaxed pt-3">
-                  <GiCheckMark className="text-blue-700" /> Clean, maintainable
-                  code as a foundation
-                </p>
-                <p className="flex items-center gap-2 text-base md:text-lg text-gray-600 leading-relaxed pt-3">
-                  <GiCheckMark className="text-blue-700" /> Performance
-                  optimization from day one
-                </p>
-                <p className="flex items-center gap-2 text-base md:text-lg text-gray-600 leading-relaxed pt-3">
-                  <GiCheckMark className="text-blue-700" /> Accessibility as a
-                  priority, not an afterthought
-                </p>
+                {principles.map((item, index) => (
+                  <p
+                    key={index}
+                    className="flex items-center gap-2 text-base md:text-lg text-gray-600 leading-relaxed pt-3"
+                  >
+                    <GiCheckMark className="text-blue-700" />
+                    {item.text}
+                  </p>
+                ))}
               </div>
             </div>
           </div>

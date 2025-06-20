@@ -5,6 +5,7 @@ export const navbarLinks = [
   { name: "About", href: "#about" },
   { name: "Team", href: "#team" },
   { name: "Projects", href: "#projects" },
+  { name: "Contacts", href: "#contact" },
 ];
 
 export function NavbarLinks({ isMobile = false }) {

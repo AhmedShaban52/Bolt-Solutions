@@ -16,6 +16,22 @@ import { BsPersonWorkspace } from "react-icons/bs";
 import { MdPhoneIphone } from "react-icons/md";
 
 
+export const principles = [
+  {
+    text: "Timely delivery is our promise — we never miss a deadline.",
+  },
+  {
+    text: "Professional results, delivered with speed and precision",
+  },
+  {
+    text: "Clean, maintainable code as a foundation",
+  },
+  {
+    text: "Performance optimization from day one",
+  },
+];
+
+
  export  const teamMembers = [
     {
       experince: "April 2024 - Present",
