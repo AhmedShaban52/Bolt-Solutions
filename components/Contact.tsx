@@ -28,7 +28,7 @@ const Contact = () => {
             </h3>
             <p className="text-sm sm:text-base text-gray-500 pt-5">
               Feel free to reach out to me through any of the following methods.
-              I'm always open to discussing new projects, creative ideas, or
+              Im always open to discussing new projects, creative ideas, or
               opportunities.
             </p>
             <div className="pt-8">
