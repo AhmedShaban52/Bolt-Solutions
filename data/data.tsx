@@ -1,4 +1,8 @@
 import { FaLaptopCode } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+import { FaPhone } from "react-icons/fa";
+
 import pro1 from "../assets/pro-1.png";
 import pro2 from "../assets/pro-2.png";
 import pro3 from "../assets/pro-3.png";
@@ -126,6 +130,24 @@ export const mobileProjects = [
     stack: ["React", "Tailwind Css", "Ant Design", "PHP", "Laravel", "MySQL"],
   },
 
+];
+
+export const contactDetails = [
+  {
+    icon: <FaLocationDot className="text-blue-700" size={20} />,
+    title: "Location",
+    value: "Cairo, Egypt",
+  },
+  {
+    icon: <MdEmail className="text-blue-700" size={20} />,
+    title: "Email",
+    value: "mostafaontrack@gmail.com",
+  },
+  {
+    icon: <FaPhone className="text-blue-700" size={20} />,
+    title: "Phone",
+    value: "+20 1155414805",
+  },
 ];
 
 
