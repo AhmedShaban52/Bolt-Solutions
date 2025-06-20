@@ -3,12 +3,10 @@ import Navbar from "../../components/Navbar";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="bg-[#0D141D] text-white min-h-screen">
+    <div className="bg-[#0C1016] text-white min-h-screen">
       <Navbar />
 
-      <div className="w-11/12 mx-auto px-2.5  pb-12">
-        {children}
-      </div>
+      <div>{children}</div>
     </div>
   );
 };
