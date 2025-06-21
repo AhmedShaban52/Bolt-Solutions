@@ -75,7 +75,7 @@ const Contact = () => {
             <h6 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-text-primary">
               Send Me a Message
             </h6>
-            <form  action="mailto:mostafaontrack@gmail.com" method="post"   encType="text/plain" className="space-y-4 sm:space-y-6">
+            <form  action="mailto:mostafaontrack@gmail.com" method="post"  encType="text/plain" className="space-y-4 sm:space-y-6">
               <div className="flex flex-col md:grid md:grid-cols-2 gap-4 sm:gap-6">
                 <div className="col-span-2 md:col-span-1">
                   <label htmlFor="name" className="text-sm font-medium text-text-primary"> Name </label>
