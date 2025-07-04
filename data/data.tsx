@@ -15,7 +15,6 @@ import mob3 from "../assets/mob3.jpeg";
 import { BsPersonWorkspace } from "react-icons/bs";
 import { MdPhoneIphone } from "react-icons/md";
 
-
 export const principles = [
   {
     text: "Timely delivery is our promise — we never miss a deadline.",
@@ -31,40 +30,44 @@ export const principles = [
   },
 ];
 
-
- export  const teamMembers = [
-    {
-      experince: "April 2024 - Present",
-      icon: <BsPersonWorkspace />,
-      name: "Ahmed Hussein",
-      title: "Laravel FullStack Developer",
-    },
-    {
-      experince: "April 2024 - Present",
-      icon: <BsPersonWorkspace />,
-      name: "Seif Amr",
-      title: "Frontend Developer",
-    },
-    {
-      experince: "April 2024 - Present",
-      icon: <BsPersonWorkspace />,
-      name: "Ahmed Shaaban",
-      title: ".NET FullStack Developer",
-    },
-    {
-      experince: "April 2024 - Present",
-      icon: <BsPersonWorkspace />,
-      name: "Yousef Mahmoud",
-      title: "Mobile Developer",
-    },
-    {
-      experince: "April 2024 - Present",
-      icon: <BsPersonWorkspace />,
-      name: "Karrem Alaa",
-      title: "Mobile Developer",
-    },
-  ];
-
+export const teamMembers = [
+  {
+    experince: "April 2024 - Present",
+    icon: <BsPersonWorkspace />,
+    name: "Ahmed Hussein",
+    title: "Laravel FullStack Developer",
+  },
+  {
+    experince: "April 2024 - Present",
+    icon: <BsPersonWorkspace />,
+    name: "Seif Amr",
+    title: "Frontend Developer",
+  },
+  {
+    experince: "April 2024 - Present",
+    icon: <BsPersonWorkspace />,
+    name: "Ahmed Shaaban",
+    title: ".NET FullStack Developer",
+  },
+  {
+    experince: "April 2024 - Present",
+    icon: <BsPersonWorkspace />,
+    name: "Manar Samhy",
+    title: "Ui/Ux Designer",
+  },
+  {
+    experince: "April 2024 - Present",
+    icon: <BsPersonWorkspace />,
+    name: "Yousef Mahmoud",
+    title: "Mobile Developer",
+  },
+  {
+    experince: "April 2024 - Present",
+    icon: <BsPersonWorkspace />,
+    name: "Karrem Alaa",
+    title: "Mobile Developer",
+  },
+];
 
 export const cards = [
   {
@@ -82,7 +85,6 @@ export const cards = [
     icon: <MdPhoneIphone className="text-blue-600 text-2xl md:text-6xl mb-4" />,
   },
 ];
-
 
 export const webProjects = [
   {
@@ -119,7 +121,6 @@ export const webProjects = [
   },
 ];
 
-
 export const mobileProjects = [
   {
     title: "E-Commerce Dashboard",
@@ -145,7 +146,6 @@ export const mobileProjects = [
     url: "https://devops.exabyte-eg.com/projects/istikbal/web/",
     stack: ["React", "Tailwind Css", "Ant Design", "PHP", "Laravel", "MySQL"],
   },
-
 ];
 
 export const contactDetails = [
@@ -165,5 +165,3 @@ export const contactDetails = [
     value: "+20 1155414805",
   },
 ];
-
-
