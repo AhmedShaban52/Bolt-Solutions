@@ -32,37 +32,37 @@ export const principles = [
 
 export const teamMembers = [
   {
-    experince: "April 2024 - Present",
+    // experince: "April 2024 - Present",
     icon: <BsPersonWorkspace />,
     name: "Ahmed Hussein",
     title: "Laravel FullStack Developer",
   },
   {
-    experince: "April 2024 - Present",
+    // experince: "April 2024 - Present",
     icon: <BsPersonWorkspace />,
     name: "Seif Amr",
     title: "Frontend Developer",
   },
   {
-    experince: "April 2024 - Present",
+    // experince: "April 2024 - Present",
     icon: <BsPersonWorkspace />,
     name: "Ahmed Shaaban",
     title: ".NET FullStack Developer",
   },
   {
-    experince: "April 2024 - Present",
+    // experince: "April 2024 - Present",
     icon: <BsPersonWorkspace />,
     name: "Manar Samhy",
     title: "Ui/Ux Designer",
   },
   {
-    experince: "April 2024 - Present",
+    // experince: "April 2024 - Present",
     icon: <BsPersonWorkspace />,
     name: "Yousef Mahmoud",
     title: "Mobile Developer",
   },
   {
-    experince: "April 2024 - Present",
+    // experince: "April 2024 - Present",
     icon: <BsPersonWorkspace />,
     name: "Karrem Alaa",
     title: "Mobile Developer",

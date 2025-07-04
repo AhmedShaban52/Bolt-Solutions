@@ -20,13 +20,13 @@ const Team = () => {
           {teamMembers.map((item, index) => (
             <div
               key={index}
-              className="relative group p-6  border border-gray-700 rounded-3xl space-y-4 overflow-hidden transition-shadow duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.1)]"
+              className="relative group px-5  py-7  border border-gray-700 rounded-3xl space-y-4 overflow-hidden transition-shadow duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.1)]"
             >
               <span className="pointer-events-none absolute w-32 h-32 right-0 bottom-1 rounded-full bg-blue-700 opacity-30 blur-2xl transform  transition-all duration-200"></span>
 
-              <p className="text-center text-blue-700 font-medium text-sm">
+              {/* <p className="text-center text-blue-700 font-medium text-sm">
                 {item.experince}
-              </p>
+              </p> */}
 
               <div className="flex items-start gap-4 z-10 relative">
                 <span className="text-blue-700 text-2xl mt-1">{item.icon}</span>
