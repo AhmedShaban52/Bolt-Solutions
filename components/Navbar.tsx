@@ -4,16 +4,23 @@ import React, { useState } from "react";
 import { NavbarLinks } from "./NavbarLinks";
 import { FaFacebook, FaInstagram, FaTiktok, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
-import logo from "../assets/logo-removebg.png";
+// import logo from "../assets/logo-removebg.png";
+import logo from "../assets/logo4.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="sticky top-0 z-50 bg-[#0b0f1a] px-5 md:px-8 xl:px-14 pt-1 pb-3">
-      <div className="relative flex items-center justify-between">
+      <div className="relative flex items-center justify-between py-1">
         {/* Logo */}
-        <Image src={logo} alt="Logo" width={30} height={30} />
+        <Image 
+        src={logo} 
+        alt="Logo" 
+        // width={30} 
+        // height={30} 
+        className="size-12 "
+        />
 
         {/* Desktop Links */}
         <div className="hidden md:flex justify-center">
@@ -79,7 +86,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="hover:text-blue-600 transition-colors duration-500 flex items-center gap-2"
             >
-              <FaFacebook /> 
+              <FaFacebook />
             </a>
             <a
               href="https://www.instagram.com/your_instagram"
@@ -87,7 +94,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="hover:text-pink-500 transition-colors duration-500 flex items-center gap-2"
             >
-              <FaInstagram /> 
+              <FaInstagram />
             </a>
             <a
               href="https://www.linkedin.com/company/bolt-solutions2/"
@@ -95,7 +102,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="hover:text-blue-700 transition-colors duration-500 flex items-center gap-2"
             >
-              <FaLinkedin /> 
+              <FaLinkedin />
             </a>
             <a
               href="https://www.tiktok.com/@your_tiktok"
@@ -103,7 +110,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="hover:text-black transition-colors duration-500 flex items-center gap-2"
             >
-              <FaTiktok /> 
+              <FaTiktok />
             </a>
           </div>
         </div>
