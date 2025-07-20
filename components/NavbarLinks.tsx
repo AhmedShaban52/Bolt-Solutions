@@ -13,7 +13,7 @@ export function NavbarLinks({ isMobile = false }) {
     <div
       className={`${
         isMobile
-          ? "flex-col items-start space-y-2"
+          ? "flex-col items-start space-y-4"
           : "flex-row items-center gap-x-2 ml-8"
       } flex`}
     >
@@ -21,9 +21,10 @@ export function NavbarLinks({ isMobile = false }) {
         <Link
           href={item.href}
           key={item.name}
-          className={`group ${isMobile ? "" : "px-3"} py-1 rounded-md font-medium transition text-gray-400 hover:text-blue-500 duration-500 cursor-pointer`}
+          className={`group relative ${isMobile ? "py-2" : "px-3 py-1"} rounded-md font-medium transition text-gray-400 hover:text-white duration-300 cursor-pointer`}
         >
           {item.name}
+          <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#269ca1] transition-all duration-300 group-hover:w-full"></span>
         </Link>
       ))}
     </div>

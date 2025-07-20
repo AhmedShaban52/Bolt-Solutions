@@ -12,7 +12,12 @@ import mob1 from "../assets/mob1.jpeg";
 import mob2 from "../assets/mob2.jpeg";
 import mob3 from "../assets/mob3.jpeg";
 
-import { BsPersonWorkspace } from "react-icons/bs";
+import {
+  BsFacebook,
+  BsGithub,
+  BsLinkedin,
+  BsPersonWorkspace,
+} from "react-icons/bs";
 import { MdPhoneIphone } from "react-icons/md";
 
 export const principles = [
@@ -32,40 +37,76 @@ export const principles = [
 
 export const teamMembers = [
   {
-    // experince: "April 2024 - Present",
-    icon: <BsPersonWorkspace />,
     name: "Ahmed Hussein",
     title: "Laravel FullStack Developer",
+    skills: ["Laravel", "PHP", "MySQL", "Vue.js"],
+    description:
+      "Specializes in building robust backend systems and scalable web applications.",
+    socialLinks: [
+      { icon: <BsGithub />, url: "#" },
+      { icon: <BsLinkedin />, url: "#" },
+      { icon: <BsFacebook />, url: "#" },
+    ],
   },
   {
-    // experince: "April 2024 - Present",
-    icon: <BsPersonWorkspace />,
     name: "Seif Amr",
     title: "Frontend Developer",
+    skills: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+    description:
+      "Creates responsive and interactive user interfaces with modern web technologies.",
+    socialLinks: [
+      { icon: <BsGithub />, url: "#" },
+      { icon: <BsLinkedin />, url: "#" },
+      { icon: <BsFacebook />, url: "#" },
+    ],
   },
   {
-    // experince: "April 2024 - Present",
-    icon: <BsPersonWorkspace />,
     name: "Ahmed Shaaban",
     title: ".NET FullStack Developer",
+    skills: [".NET Core", "C#", "SQL Server", "Azure"],
+    description:
+      "Expert in enterprise application development with Microsoft technologies.",
+    socialLinks: [
+      { icon: <BsGithub />, url: "#" },
+      { icon: <BsLinkedin />, url: "#" },
+      { icon: <BsFacebook />, url: "#" },
+    ],
   },
   {
-    // experince: "April 2024 - Present",
-    icon: <BsPersonWorkspace />,
     name: "Manar Samhy",
-    title: "Ui/Ux Designer",
+    title: "UI/UX Designer",
+    skills: ["Figma", "Adobe XD", "User Research", "Prototyping"],
+    description:
+      "Transforms complex problems into intuitive and beautiful design solutions.",
+    socialLinks: [
+      { icon: <BsGithub />, url: "#" },
+      { icon: <BsLinkedin />, url: "#" },
+      { icon: <BsFacebook />, url: "#" },
+    ],
   },
   {
-    // experince: "April 2024 - Present",
-    icon: <BsPersonWorkspace />,
     name: "Yousef Mahmoud",
     title: "Mobile Developer",
+    skills: ["Flutter", "Dart", "Firebase", "REST APIs"],
+    description:
+      "Builds cross-platform mobile applications with excellent performance.",
+    socialLinks: [
+      { icon: <BsGithub />, url: "#" },
+      { icon: <BsLinkedin />, url: "#" },
+      { icon: <BsFacebook />, url: "#" },
+    ],
   },
   {
-    // experince: "April 2024 - Present",
-    icon: <BsPersonWorkspace />,
     name: "Karrem Alaa",
     title: "Mobile Developer",
+    skills: ["React Native", "JavaScript", "Redux", "App Store"],
+    description:
+      "Creates native-like experiences with React Native and modern tools.",
+    socialLinks: [
+      { icon: <BsGithub />, url: "#" },
+      { icon: <BsLinkedin />, url: "#" },
+      { icon: <BsFacebook />, url: "#" },
+    ],
   },
 ];
 
