@@ -14,6 +14,7 @@ import mob3 from "../assets/mob3.jpeg";
 
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
 import { MdPhoneIphone } from "react-icons/md";
+import { FaBehanceSquare } from "react-icons/fa";
 
 export const principles = [
   {
@@ -34,7 +35,7 @@ export const teamMembers = [
   {
     name: "Ahmed Hussein",
     title: "Laravel FullStack Developer",
-    skills: ["Laravel", "PHP", "MySQL", "Vue.js"],
+    skills: ["Laravel", "PHP", "MySQL", "Docker"],
     description:
       "Specializes in building robust backend systems and scalable web applications.",
     socialLinks: [
@@ -76,11 +77,11 @@ export const teamMembers = [
   {
     name: "Manar Samhy",
     title: "UI/UX Designer / Graphic Designer",
-    skills: ["Figma", "Adobe XD", "User Research", "Prototyping"],
+    skills: ["Adobe Photoshop", "Illustrator", "AdobeXD", "Adode InDesign"],
     description:
       "Transforms complex problems into intuitive and beautiful design solutions.",
     socialLinks: [
-      { icon: <BsGithub />, url: "#" },
+      { icon: <FaBehanceSquare />, url: "https://www.behance.net/manar-mohamed" },
       { icon: <BsLinkedin />, url: "#" },
       { icon: <BsFacebook />, url: "#" },
     ],
@@ -100,7 +101,7 @@ export const teamMembers = [
   {
     name: "Karrem Alaa",
     title: "Mobile Developer",
-    skills: ["React Native", "Flutter", "Firebase", "App Store"],
+    skills: ["State Management", "Flutter", "Firebase", "App Store"],
     description:
       "Creates native-like experiences with React Native and modern tools.",
     socialLinks: [
