@@ -94,14 +94,26 @@ const About = () => {
               </div>
             </div>
 
-            <div className="border border-gray-700 p-6 rounded-3xl flex flex-col gap-2 size-fit group hover:border-[#269ca1] duration-500">
+            <div className="size-full border border-gray-700 p-5 rounded-3xl flex flex-col gap-2 group hover:border-[#269ca1] duration-500">
               <h4 className="text-white text-lg font-bold group-hover:text-[#269ca1] duration-500">
                 Current Focus
               </h4>
-              <div className="flex items-center gap-3">
+              <div>
                 <p className="text-[#8b949e] text-sm">
                   Building scalable digital experiences through collaborative
                   software engineering
+                </p>
+              </div>
+              <div>
+                <p className="text-[#8b949e] text-sm">
+                  Creating responsive cloud-native applications with
+                  microservices architecture
+                </p>
+              </div>
+              <div>
+                <p className="text-[#8b949e] text-sm">
+                  Implementing secure blockchain systems using decentralized
+                  network protocols
                 </p>
               </div>
             </div>

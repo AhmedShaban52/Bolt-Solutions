@@ -5,12 +5,13 @@ import { FaInstagram } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { BsSendFill } from "react-icons/bs";
+import Link from "next/link";
 
 const Contact = () => {
   return (
     <section
       id="contact"
-      className="scroll-mt-8 py-12 sm:py-16 md:py-20 bg-[#0D1117] relative overflow-hidden"
+      className="scroll-mt-8 py-12 sm:py-16 md:py-24 md:pb-20 bg-[#0D1117] relative overflow-hidden"
     >
       <div className="absolute top-[-8%] -left-10 w-40 h-96 sm:w-80 sm:h-64 rounded-full bg-[#269ca1]/10 filter blur-2xl opacity-70 animate-float1" />
       <div className="absolute bottom-10 -right-10 w-60 h-60 sm:w-80 sm:h-80 rounded-full bg-[#269ca1]/10 filter blur-2xl opacity-50 animate-float2" />
@@ -65,18 +66,31 @@ const Contact = () => {
                 Follow Me
               </h5>
               <div className="flex justify-center md:justify-start gap-3 sm:gap-4 pt-2 sm:pt-4">
-                <a className="inline-flex items-center text-text-primary justify-center p-1.5 sm:p-2 text-xs sm:text-sm font-medium transition-colors rounded-full border border-white/30 hover:bg-white/10 cursor-pointer hover:border-[#269CA1] hover:text-[#269CA1] duration-300">
+                <Link
+                  href="#"
+                  className="inline-flex items-center text-text-primary justify-center p-1.5 sm:p-2 text-xs sm:text-sm font-medium transition-colors rounded-full border border-white/30 hover:bg-white/10 cursor-pointer hover:border-[#269CA1] hover:text-[#269CA1] duration-300"
+                >
                   <AiFillGithub size={18} />
-                </a>
-                <a className="inline-flex items-center text-text-primary justify-center p-1.5 sm:p-2 text-xs sm:text-sm font-medium transition-colors rounded-full border border-white/30 hover:bg-white/10 cursor-pointer hover:border-[#269CA1] hover:text-[#269CA1] duration-300">
+                </Link>
+                <Link
+                  href="https://www.instagram.com/dodixtech?igsh=azBhZDlra3IycWx1"
+                  target="_blank"
+                  className="inline-flex items-center text-text-primary justify-center p-1.5 sm:p-2 text-xs sm:text-sm font-medium transition-colors rounded-full border border-white/30 hover:bg-white/10 cursor-pointer hover:border-[#269CA1] hover:text-[#269CA1] duration-300"
+                >
                   <FaInstagram size={18} />
-                </a>
-                <a className="inline-flex items-center text-text-primary justify-center p-1.5 sm:p-2 text-xs sm:text-sm font-medium transition-colors rounded-full border border-white/30 hover:bg-white/10 cursor-pointer hover:border-[#269CA1] hover:text-[#269CA1] duration-300">
+                </Link>
+                <Link
+                  href="#"
+                  className="inline-flex items-center text-text-primary justify-center p-1.5 sm:p-2 text-xs sm:text-sm font-medium transition-colors rounded-full border border-white/30 hover:bg-white/10 cursor-pointer hover:border-[#269CA1] hover:text-[#269CA1] duration-300"
+                >
                   <IoLogoLinkedin size={18} />
-                </a>
-                <a className="inline-flex items-center text-text-primary justify-center p-1.5 sm:p-2 text-xs sm:text-sm font-medium transition-colors rounded-full border border-white/30 hover:bg-white/10 cursor-pointer hover:border-[#269CA1] hover:text-[#269CA1] duration-300">
+                </Link>
+                <Link
+                  href="#"
+                  className="inline-flex items-center text-text-primary justify-center p-1.5 sm:p-2 text-xs sm:text-sm font-medium transition-colors rounded-full border border-white/30 hover:bg-white/10 cursor-pointer hover:border-[#269CA1] hover:text-[#269CA1] duration-300"
+                >
                   <MdEmail size={18} />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -154,7 +168,7 @@ const Contact = () => {
                   placeholder="Write your message here..."
                 />
               </div>
-              <button className="w-full px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm bg-gradient-to-r from-[#269CA1] to-[#1D8A8F] text-white font-medium rounded-lg hover:from-[#1D8A8F] hover:to-[#14777B] transition-all transform hover:scale-[1.02] shadow shadow-[#269CA1]/30 flex items-center justify-center cursor-pointer group relative overflow-hidden">
+              <button className="w-full px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm bg-gradient-to-r from-[#269CA1] to-[#1D8A8F] text-white font-medium rounded-lg hover:from-[#1D8A8F] hover:to-[#14777B] transition-all transform  duration-500 shadow shadow-[#269CA1]/30 flex items-center justify-center cursor-pointer group relative overflow-hidden">
                 <span className="absolute inset-0 bg-gradient-to-r from-[#1D8A8F] to-[#14777B] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 <span className="relative z-10 flex items-center">
                   <BsSendFill size={18} className="mr-2" /> Send Message

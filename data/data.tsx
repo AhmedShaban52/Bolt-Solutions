@@ -12,12 +12,7 @@ import mob1 from "../assets/mob1.jpeg";
 import mob2 from "../assets/mob2.jpeg";
 import mob3 from "../assets/mob3.jpeg";
 
-import {
-  BsFacebook,
-  BsGithub,
-  BsLinkedin,
-  BsPersonWorkspace,
-} from "react-icons/bs";
+import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
 import { MdPhoneIphone } from "react-icons/md";
 
 export const principles = [
@@ -67,14 +62,20 @@ export const teamMembers = [
     description:
       "Expert in enterprise application development with Microsoft technologies.",
     socialLinks: [
-      { icon: <BsGithub />, url: "#" },
-      { icon: <BsLinkedin />, url: "#" },
-      { icon: <BsFacebook />, url: "#" },
+      { icon: <BsGithub />, url: "https://github.com/AhmedShaban52" },
+      {
+        icon: <BsLinkedin />,
+        url: "https://www.linkedin.com/in/ahmed-shaaban52/",
+      },
+      {
+        icon: <BsFacebook />,
+        url: "https://www.facebook.com/ahmed.shaaban522000",
+      },
     ],
   },
   {
     name: "Manar Samhy",
-    title: "UI/UX Designer",
+    title: "UI/UX Designer / Graphic Designer",
     skills: ["Figma", "Adobe XD", "User Research", "Prototyping"],
     description:
       "Transforms complex problems into intuitive and beautiful design solutions.",
@@ -112,18 +113,36 @@ export const teamMembers = [
 
 export const cards = [
   {
-    hreaf: "web-development",
+    href: "web-development",
     title: "Web Development",
     description:
       "Build modern, responsive, and interactive websites using the latest web technologies to deliver seamless user experiences.",
-    icon: <FaLaptopCode className="text-blue-600 text-2xl md:text-6xl mb-4" />,
+    icon: <FaLaptopCode />,
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
-    hreaf: "mobile-development",
+    href: "mobile-development",
     title: "Mobile Development",
     description:
       "Design and develop high-performance mobile applications tailored for both iOS and Android platforms, ensuring smooth and engaging user experiences.",
-    icon: <MdPhoneIphone className="text-blue-600 text-2xl md:text-6xl mb-4" />,
+    icon: <MdPhoneIphone />,
+    technologies: ["React Native", "Flutter", "Swift", "Kotlin"],
+  },
+  {
+    href: "ui-design",
+    title: "UI/UX Design / Graphic-Design",
+    description:
+      "Create intuitive and beautiful user interfaces that enhance user engagement and provide exceptional digital experiences.",
+    icon: <FaLaptopCode />,
+    technologies: ["Figma", "Adobe XD", "Sketch", "Photoshop"],
+  },
+  {
+    href: "backend-solutions",
+    title: "Backend Solutions",
+    description:
+      "Develop robust and scalable server-side solutions that power your applications and handle complex business logic efficiently.",
+    icon: <MdPhoneIphone />,
+    technologies: ["Node.js", "Express", "MongoDB", "Firebase"],
   },
 ];
 
@@ -169,7 +188,14 @@ export const mobileProjects = [
       "Responsive admin dashboard for an e-commerce platform with analytics, inventory management, and order processing.",
     image: mob1,
     url: "https://devops.exabyte-eg.com/projects/temry/web/",
-    stack: ["React", "Tailwind Css", "Ant Design", "PHP", "Laravel", "MySQL"],
+    stack: [
+      "Flutter",
+      "Dart",
+      "Riverpod",
+      "Firebase",
+      "REST API",
+      "Material Design",
+    ],
   },
   {
     title: "LMS System Dashboard",
@@ -177,7 +203,14 @@ export const mobileProjects = [
       "Comprehensive dashboard tailored for learning management systems, with tools for course management, student tracking, progress analytics, and multi-role administration.",
     image: mob2,
     url: "https://devops.exabyte-eg.com/projects/learnu/web/",
-    stack: ["React", "Tailwind Css", "Ant Design", "PHP", "Laravel", "MySQL"],
+    stack: [
+      "Flutter",
+      "Dart",
+      "Bloc",
+      "Firebase",
+      "Cloud Firestore",
+      "Provider",
+    ],
   },
   {
     title: "Furniture E-Commerce",
@@ -185,7 +218,7 @@ export const mobileProjects = [
       "Responsive furniture store dashboard focused on managing product catalogs, customer orders, and inventory tracking across various home and office categories.",
     image: mob3,
     url: "https://devops.exabyte-eg.com/projects/istikbal/web/",
-    stack: ["React", "Tailwind Css", "Ant Design", "PHP", "Laravel", "MySQL"],
+    stack: ["Flutter", "Dart", "GetX", "Node.js", "MongoDB", "Stripe Payments"],
   },
 ];
 

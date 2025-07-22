@@ -2,8 +2,8 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { NavbarLinks } from "./NavbarLinks";
-import { FaFacebook, FaInstagram, FaTiktok, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
+import { RiCustomerService2Fill } from "react-icons/ri";
 import logo from "../assets/logo4.png";
 
 const Navbar = () => {
@@ -23,25 +23,29 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div 
+    <div
       className={`sticky top-0 z-50 px-5 md:px-8 xl:px-14 pt-1 pb-3 transition-all duration-500 ${
-        scrolled 
-          ? "bg-[#0D1117] shadow-lg border-b border-[#1a3a5f]" 
+        scrolled
+          ? "bg-[#0D1117] shadow-lg border-b border-[#1a3a5f]"
           : "bg-transparent"
       }`}
     >
       <div className="relative flex items-center justify-between py-1">
         {/* Logo */}
         <div className="flex items-center">
-          <Image 
-            src={logo} 
-            alt="Dodix Tech Logo" 
+          <Image
+            src={logo}
+            alt="Dodix Tech Logo"
             className="size-10 sm:size-12"
           />
-          <span className="ml-2 text-white text-xl font-bold hidden sm:block">
-            Dodix<span className="text-[#269ca1]">Tech</span>
-          </span>
         </div>
 
         {/* Desktop Links */}
@@ -49,24 +53,20 @@ const Navbar = () => {
           <NavbarLinks />
         </div>
 
-        {/* Desktop Icons */}
-        <div className="hidden md:flex items-center space-x-3">
-          {[
-            { icon: <FaFacebook size={18} />, color: "hover:text-[#4267B2]", href: "https://www.facebook.com/Bolt.Solutions2" },
-            { icon: <FaInstagram size={18} />, color: "hover:text-[#E1306C]", href: "https://www.instagram.com/your_instagram" },
-            { icon: <FaLinkedin size={18} />, color: "hover:text-[#0A66C2]", href: "https://www.linkedin.com/company/bolt-solutions2/" },
-            { icon: <FaTiktok size={18} />, color: "hover:text-[#000000]", href: "https://www.tiktok.com/@your_tiktok" },
-          ].map((social, index) => (
-            <a
-              key={index}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`bg-[#1a2a3a] w-8 h-8 rounded-full flex items-center justify-center text-gray-400 transition-all duration-300 ${social.color}`}
-            >
-              {social.icon}
-            </a>
-          ))}
+        {/* Contact Button - Desktop */}
+        <div className="hidden md:block">
+          <button
+            onClick={scrollToContact}
+            className="flex items-center gap-2 pr-3.5 pl-6 py-2.5 cursor-pointer bg-gradient-to-r from-[#269ca1] to-[#1d8a8f] text-white font-medium rounded-full hover:from-[#1d8a8f] hover:to-[#14777b] transition-all duration-300 group relative overflow-hidden"
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-[#1d8a8f] to-[#14777b] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <span className="relative z-10 flex items-center">
+              Contact Us
+              <RiCustomerService2Fill className="ml-3 text-lg" />
+            </span>
+            {/* نقطة الأنيمشن الدائمة */}
+            <span className="relative z-10 w-2 h-2 bg-white rounded-full animate-ping  bottom-0 right-0 opacity-50"></span>
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -85,24 +85,18 @@ const Navbar = () => {
             <NavbarLinks isMobile={true} />
           </div>
 
-          {/* Mobile Icons */}
-          <div className="flex items-center justify-start gap-x-4 text-xl mt-6">
-            {[
-              { icon: <FaFacebook size={20} />, color: "hover:text-[#4267B2]", href: "https://www.facebook.com/Bolt.Solutions2" },
-              { icon: <FaInstagram size={20} />, color: "hover:text-[#E1306C]", href: "https://www.instagram.com/your_instagram" },
-              { icon: <FaLinkedin size={20} />, color: "hover:text-[#0A66C2]", href: "https://www.linkedin.com/company/bolt-solutions2/" },
-              { icon: <FaTiktok size={20} />, color: "hover:text-[#000000]", href: "https://www.tiktok.com/@your_tiktok" },
-            ].map((social, index) => (
-              <a
-                key={index}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`bg-[#1a2a3a] w-10 h-10 rounded-full flex items-center justify-center text-gray-400 transition-all duration-300 ${social.color}`}
-              >
-                {social.icon}
-              </a>
-            ))}
+          {/* Contact Button - Mobile */}
+          <div className="mt-6">
+            <button
+              onClick={() => {
+                scrollToContact();
+                setIsOpen(false);
+              }}
+              className="w-full flex items-center justify-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#269ca1] to-[#1d8a8f] text-white font-medium rounded-full hover:from-[#1d8a8f] hover:to-[#14777b] transition-all duration-300"
+            >
+              <RiCustomerService2Fill className="text-lg" />
+              تواصل معنا
+            </button>
           </div>
         </div>
       )}

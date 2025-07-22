@@ -14,14 +14,14 @@ export function NavbarLinks({ isMobile = false }) {
       className={`${
         isMobile
           ? "flex-col items-start space-y-4"
-          : "flex-row items-center gap-x-2 ml-8"
+          : "flex-row items-center gap-x-6"
       } flex`}
     >
       {navbarLinks.map((item) => (
         <Link
           href={item.href}
           key={item.name}
-          className={`group relative ${isMobile ? "py-2" : "px-3 py-1"} rounded-md font-medium transition text-gray-400 hover:text-white duration-300 cursor-pointer`}
+          className={`group relative ${isMobile ? "py-2" : "px-1.5 py-1"} rounded-md font-medium transition text-gray-400 hover:text-white duration-300 cursor-pointer`}
         >
           {item.name}
           <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#269ca1] transition-all duration-300 group-hover:w-full"></span>

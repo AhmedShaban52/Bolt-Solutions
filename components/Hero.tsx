@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 
 const Hero = () => {
@@ -121,13 +122,19 @@ const Hero = () => {
           audience.
         </p>
 
-        <div className="flex flex-row flex-wrap justify-center gap-2 animate-fadeIn delay-500">
-          <button className="px-5 py-1.5 sm:px-8 sm:py-3 text-xs sm:text-base bg-gradient-to-r from-[#269ca1] to-[#1d8a8f] text-white font-medium rounded-full hover:from-[#1d8a8f] hover:to-[#14777b] transition-all transform hover:scale-105 shadow shadow-[#269ca1]/30">
+        <div className="flex flex-row flex-wrap justify-center gap-3 animate-fadeIn delay-500">
+          <Link
+            href="#projects"
+            className="px-5 py-1.5 sm:px-8 sm:py-3 text-xs sm:text-base bg-gradient-to-r from-[#269ca1] to-[#1d8a8f] text-white font-medium rounded-full hover:from-[#1d8a8f] hover:to-[#14777b] transition-all transform  shadow shadow-[#269ca1]/30 duration-500"
+          >
             View Projects
-          </button>
-          <button className="px-5 py-1.5 sm:px-8 sm:py-3 text-xs sm:text-base bg-transparent border border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-all">
+          </Link>
+          <Link
+            href="#contact"
+            className="px-5 py-1.5 sm:px-8 sm:py-3 text-xs sm:text-base bg-transparent border border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-all"
+          >
             Contact Me
-          </button>
+          </Link>
         </div>
       </div>
 

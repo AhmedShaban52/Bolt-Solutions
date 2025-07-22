@@ -1,30 +1,38 @@
 import React from "react";
 import Image from "next/image";
-import { FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
 import { mobileProjects } from "../../data/data";
 
-const page = () => {
+const Page = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-[#0a0f1a] to-[#0d1117] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section className="py-16 bg-gradient-to-b from-[#0a0f1a] to-[#0d1117] text-white min-h-screen">
+      <div className="w-11/12 mx-auto px-2">
         <div className="text-center mb-16">
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-3">
             Mobile <span className="text-[#269ca1]">Projects</span>
           </h1>
           <div className="mx-auto w-44 md:w-96 h-1 bg-gradient-to-r from-[#269ca1] to-transparent mb-3"></div>
           <p className="text-gray-400 mt-3 max-w-xl mx-auto text-lg">
-            A selection of mobile applications built with cutting-edge technologies,
-            delivering seamless user experiences across iOS and Android platforms.
+            A selection of mobile applications built with cutting-edge
+            technologies, delivering seamless user experiences across iOS and
+            Android platforms.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {mobileProjects.map((project, index) => (
-            <div 
+            <div
               key={index}
               className="group border border-[#1a3a5f] rounded-2xl overflow-hidden transition-all duration-500 hover:border-[#269ca1] hover:shadow-[0_0_30px_rgba(38,156,161,0.2)] relative"
             >
+              <Link
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute inset-0 z-10"
+                aria-label={`View ${project.title} project`}
+              ></Link>
+
               <div className="relative h-72 overflow-hidden bg-[#0d1117] flex items-center justify-center">
                 <div className="relative w-3/4 mx-auto">
                   <Image
@@ -37,22 +45,21 @@ const page = () => {
                 </div>
               </div>
 
-              <div className="p-5 bg-[#0d1117]">
+              <div className="p-5 bg-[#0d1117] relative">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-bold text-white">
                     {project.title}
                   </h3>
-                  <a
+                  <Link
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-sm text-[#269ca1] hover:text-[#a0e0dd] transition-colors"
+                    className="flex items-center gap-1.5 text-sm text-[#269ca1] hover:text-[#a0e0dd] transition-colors relative z-20"
                   >
-                    <FiExternalLink className="text-lg" />
-                    <span className="hidden md:block">Live Demo</span>
-                  </a>
+                    ↗<span className="hidden md:block">Live Demo</span>
+                  </Link>
                 </div>
-                
+
                 <p className="text-gray-400 text-sm md:text-base mb-4">
                   {project.description}
                 </p>
@@ -68,21 +75,23 @@ const page = () => {
                   ))}
                 </div>
               </div>
-              
-              <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#0d2a2c] flex items-center justify-center text-[#269ca1] group-hover:bg-[#269ca1] group-hover:text-white transition-all">
-                <span className="text-lg">↗</span>
+
+              <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#0d2a2c] flex items-center justify-center text-[#269ca1] group-hover:bg-[#269ca1] group-hover:text-white transition-all z-20">
+                ↗
               </div>
             </div>
           ))}
         </div>
-        
+
         <div className="text-center mt-16">
           <Link
             href="/"
             className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-transparent border border-[#269ca1] rounded-lg hover:bg-[#269ca1] transition-colors duration-300 group"
           >
             <span>←</span>
-            <span className="ml-2 group-hover:ml-3 transition-all">Back to Home</span>
+            <span className="ml-2 group-hover:ml-3 transition-all">
+              Back to Home
+            </span>
           </Link>
         </div>
       </div>
@@ -90,4 +99,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
