@@ -38,7 +38,7 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="relative flex items-center justify-between py-1">
+      <div className="relative flex items-center justify-between pt-1.5 pb-0.5">
         {/* Logo */}
         <div className="flex items-center">
           <Image
