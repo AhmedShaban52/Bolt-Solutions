@@ -5,6 +5,9 @@ import { NavbarLinks } from "./NavbarLinks";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import logo from "../assets/logo4.png";
+import Link from "next/link";
+import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,17 +89,32 @@ const Navbar = () => {
           </div>
 
           {/* Contact Button - Mobile */}
-          <div className="mt-6">
-            <button
-              onClick={() => {
-                scrollToContact();
-                setIsOpen(false);
-              }}
-              className="w-full flex items-center justify-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#269ca1] to-[#1d8a8f] text-white font-medium rounded-full hover:from-[#1d8a8f] hover:to-[#14777b] transition-all duration-300"
+          <div className="flex space-x-4 pt-2.5">
+            <Link
+              href="#"
+              className="bg-[#1a2a3a] hover:bg-[#269ca1] w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
             >
-              <RiCustomerService2Fill className="text-lg" />
-              Contact Us
-            </button>
+              <AiFillGithub className="text-white text-lg" />
+            </Link>
+            <Link
+              href="#"
+              className="bg-[#1a2a3a] hover:bg-[#269ca1] w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
+            >
+              <FaLinkedinIn className="text-white text-lg" />
+            </Link>
+            <Link
+              href="https://www.instagram.com/dodixtech?igsh=azBhZDlra3IycWx1"
+              target="_blank"
+              className="bg-[#1a2a3a] hover:bg-[#269ca1] w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
+            >
+              <FaInstagram className="text-white text-lg" />
+            </Link>
+            <Link
+              href="#"
+              className="bg-[#1a2a3a] hover:bg-[#269ca1] w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
+            >
+              <AiOutlineTwitter className="text-white text-lg" />
+            </Link>
           </div>
         </div>
       )}
