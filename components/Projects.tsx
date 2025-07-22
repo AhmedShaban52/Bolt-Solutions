@@ -81,10 +81,10 @@ const Projects = () => {
             Interested in our work?
             <Link
               href="#contact"
-              className="text-[#269ca1] hover:text-[#d1f5f3] transition-colors duration-300 font-semibold relative group"
+              className="text-[#269ca1] hover:text-[#d1f5f3] transition-colors duration-300 font-semibold relative group px-1"
             >
               Contact us today
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#269ca1] transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1.5 left-0 w-0 h-0.5 bg-[#269ca1] transition-all duration-300 group-hover:w-full"></span>
             </Link>
             to discuss how we can bring your project to life.
           </p>
