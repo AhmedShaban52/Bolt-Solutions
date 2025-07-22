@@ -95,7 +95,7 @@ const Navbar = () => {
               className="w-full flex items-center justify-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#269ca1] to-[#1d8a8f] text-white font-medium rounded-full hover:from-[#1d8a8f] hover:to-[#14777b] transition-all duration-300"
             >
               <RiCustomerService2Fill className="text-lg" />
-              تواصل معنا
+              Contact Us
             </button>
           </div>
         </div>
