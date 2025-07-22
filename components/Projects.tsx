@@ -77,7 +77,7 @@ const Projects = () => {
         <div className="mt-16 mx-auto w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-[#269ca1] to-transparent opacity-30"></div>
 
         <div className="mt-16 text-center">
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-4xl mx-auto">
             Interested in our work?
             <Link
               href="#contact"
