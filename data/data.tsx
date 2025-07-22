@@ -58,7 +58,7 @@ export const teamMembers = [
   {
     name: "Ahmed Shaaban",
     title: ".NET FullStack Developer",
-    skills: [".NET Core", "C#", "SQL Server", "Azure"],
+    skills: [".NET Core", "C#", "SQL Server", "Next.js"],
     description:
       "Expert in enterprise application development with Microsoft technologies.",
     socialLinks: [
@@ -100,7 +100,7 @@ export const teamMembers = [
   {
     name: "Karrem Alaa",
     title: "Mobile Developer",
-    skills: ["React Native", "JavaScript", "Redux", "App Store"],
+    skills: ["React Native", "Flutter", "Firebase", "App Store"],
     description:
       "Creates native-like experiences with React Native and modern tools.",
     socialLinks: [
