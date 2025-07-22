@@ -68,7 +68,7 @@ const About = () => {
                 <div>
                   <p className="text-[#8b949e] text-sm">Email</p>
                   <p className="text-white text-sm">
-                    contact@boltsolutions.com
+                    dodix@gmail.com
                   </p>
                 </div>
               </div>

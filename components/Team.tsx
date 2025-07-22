@@ -12,7 +12,7 @@ const Team = () => {
       <div className="absolute top-10 left-[-5%] w-60 h-60 rounded-full bg-[#269ca1]/10 filter blur-3xl opacity-50 animate-float1"></div>
       <div className="absolute bottom-10 right-[-5%] w-80 h-80 rounded-full bg-[#269ca1]/10 filter blur-3xl opacity-40 animate-float2"></div>
 
-      <div className="w-11/12 mx-auto px-2.5 lg:px-14 md:pt-20 pb-12 relative z-10">
+      <div className="w-11/12 mx-auto px-2 lg:px-14 md:pt-20 pb-12 relative z-10">
         <div className="text-center">
           <h1 className="text-white text-2xl md:text-5xl font-bold mb-2.5">
             Team <span className="text-[#38b2ac]">Members</span>
@@ -28,7 +28,7 @@ const Team = () => {
           {teamMembers.map((item, index) => (
             <div
               key={index}
-              className="relative group px-6 py-8 border border-[#1a4d50] rounded-3xl space-y-5 overflow-hidden transition-all duration-500 hover:shadow-[0_0_15px_rgba(56,178,172,0.15)] hover:border-[#38b2ac]"
+              className="relative group px-5 py-8 border border-[#1a4d50] rounded-3xl space-y-5 overflow-hidden transition-all duration-500 hover:shadow-[0_0_15px_rgba(56,178,172,0.15)] hover:border-[#38b2ac]"
             >
               <span className="pointer-events-none absolute w-40 h-40 right-0 bottom-0 rounded-full bg-[#269ca1]/15 blur-2xl transform transition-all duration-500 group-hover:opacity-40 group-hover:scale-105"></span>
 

@@ -65,7 +65,7 @@ const Contact = () => {
               <h5 className="text-xl sm:text-2xl font-semibold text-text-primary">
                 Follow Me
               </h5>
-              <div className="flex justify-center md:justify-start gap-3 sm:gap-4 pt-2 sm:pt-4">
+              <div className="flex justify-start gap-3 sm:gap-4 pt-2 sm:pt-4">
                 <Link
                   href="#"
                   className="inline-flex items-center text-text-primary justify-center p-1.5 sm:p-2 text-xs sm:text-sm font-medium transition-colors rounded-full border border-white/30 hover:bg-white/10 cursor-pointer hover:border-[#269CA1] hover:text-[#269CA1] duration-300"
@@ -102,7 +102,7 @@ const Contact = () => {
               Send Me a Message
             </h6>
             <form
-              action="mailto:mostafaontrack@gmail.com"
+              action="mailto:dodix@gmail.com"
               method="post"
               encType="text/plain"
               className="space-y-4 sm:space-y-6 relative z-10"

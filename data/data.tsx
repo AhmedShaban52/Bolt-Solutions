@@ -231,7 +231,7 @@ export const contactDetails = [
   {
     icon: <MdEmail className="text-blue-700" size={20} />,
     title: "Email",
-    value: "mostafaontrack@gmail.com",
+    value: "dodix@gmail.com",
   },
   {
     icon: <FaPhone className="text-blue-700" size={20} />,
