@@ -2,7 +2,6 @@ import Link from "next/link";
 
 import { cards } from "../data/data";
 
-
 const Projects = () => {
   return (
     <section
@@ -23,7 +22,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
           {cards.map((card, index) => (
             <Link
               href={card.href}

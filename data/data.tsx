@@ -67,7 +67,7 @@ export const teamMembers = [
       "Builds cross-platform mobile applications with excellent performance.",
   },
   {
-    name: "Karrem Alaa",
+    name: "Kareem Alaa",
     title: "Mobile Developer",
     skills: ["State Management", "Flutter", "Firebase", "App Store"],
     description:
@@ -99,14 +99,6 @@ export const cards = [
       "Create intuitive and beautiful user interfaces that enhance user engagement and provide exceptional digital experiences.",
     icon: <FaLaptopCode />,
     technologies: ["Figma", "Adobe XD", "Sketch", "Photoshop"],
-  },
-  {
-    href: "backend-solutions",
-    title: "Backend Solutions",
-    description:
-      "Develop robust and scalable server-side solutions that power your applications and handle complex business logic efficiently.",
-    icon: <MdPhoneIphone />,
-    technologies: ["Node.js", "Express", "MongoDB", "Firebase"],
   },
 ];
 
@@ -195,7 +187,7 @@ export const contactDetails = [
   {
     icon: <MdEmail className="text-blue-700" size={20} />,
     title: "Email",
-    value: "dodix@gmail.com",
+    value: "dodixtech@gmail.com",
   },
   {
     icon: <FaPhone className="text-blue-700" size={20} />,

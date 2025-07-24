@@ -102,7 +102,7 @@ const Contact = () => {
               Send Me a Message
             </h6>
             <form
-              action="mailto:dodix@gmail.com"
+              action="mailto:dodixtech@gmail.com"
               method="post"
               encType="text/plain"
               className="space-y-4 sm:space-y-6 relative z-10"
@@ -113,8 +113,7 @@ const Contact = () => {
                     htmlFor="name"
                     className="text-sm font-medium text-text-primary"
                   >
-                    {" "}
-                    Name{" "}
+                    Name
                   </label>
                   <input
                     type="text"
@@ -128,8 +127,7 @@ const Contact = () => {
                     htmlFor="email"
                     className="text-sm font-medium text-text-primary"
                   >
-                    {" "}
-                    Email{" "}
+                    Email
                   </label>
                   <input
                     type="email"
@@ -144,8 +142,7 @@ const Contact = () => {
                   htmlFor="text"
                   className="text-sm font-medium text-text-primary"
                 >
-                  {" "}
-                  Subject{" "}
+                  Subject
                 </label>
                 <input
                   type="text"
@@ -159,8 +156,7 @@ const Contact = () => {
                   htmlFor="message"
                   className="text-sm font-medium text-text-primary"
                 >
-                  {" "}
-                  Message{" "}
+                  Message
                 </label>
                 <textarea
                   id="message"

@@ -67,9 +67,7 @@ const About = () => {
                 </div>
                 <div>
                   <p className="text-[#8b949e] text-sm">Email</p>
-                  <p className="text-white text-sm">
-                    dodix@gmail.com
-                  </p>
+                  <p className="text-white text-sm">dodixtech@gmail.com</p>
                 </div>
               </div>
 
@@ -121,7 +119,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* أشكال هندسية زخرفية */}
       <div className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full border-4 border-[#269ca1]/10"></div>
       <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full border-4 border-[#269ca1]/10"></div>
     </section>

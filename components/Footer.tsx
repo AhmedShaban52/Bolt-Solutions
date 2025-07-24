@@ -122,7 +122,7 @@ const Footer = () => {
                     Email
                   </p>
                   <p className="text-white group-hover:text-[#269ca1] transition-colors duration-300">
-                    contact@dodixtech.com
+                    dodixtech@gmail.com
                   </p>
                 </Link>
               </li>
@@ -160,10 +160,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* خط فاصل */}
         <div className="border-t border-[#1a3a5f] my-10"></div>
 
-        {/* حقوق النشر والروابط الإضافية */}
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
             &copy; {currentYear} Dodix Tech. All rights reserved.
@@ -191,7 +189,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* عنصر زخرفي سفلي */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#0a1c2e] via-[#269ca1] to-[#0a1c2e]"></div>
     </footer>
   );

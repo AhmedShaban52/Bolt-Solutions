@@ -11,12 +11,10 @@ const Hero = () => {
     const ctx = canvas.getContext("2d");
     let animationFrameId;
 
-    // تحويل اللون الأساسي إلى HSLA
-    const baseHue = 182; // Hue للون #269CA1
-    const baseSaturation = 62; // Saturation للون #269CA1
-    const baseLightness = 39; // Lightness للون #269CA1
+    const baseHue = 182; 
+    const baseSaturation = 62; 
+    const baseLightness = 39; 
 
-    // تعيين حجم الكانفاس
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -25,16 +23,16 @@ const Hero = () => {
     window.addEventListener("resize", resizeCanvas);
     resizeCanvas();
 
-    // إنشاء جزيئات متحركة بألوان متناغمة
+ 
     const particles = [];
     const particleCount = window.innerWidth < 768 ? 50 : 100;
 
     for (let i = 0; i < particleCount; i++) {
-      // إنشاء تدرجات من اللون الأساسي
-      const hueVariation = baseHue + (Math.random() * 30 - 15); // ±15 درجة
-      const saturation = baseSaturation + (Math.random() * 20 - 10); // ±10%
-      const lightness = baseLightness + (Math.random() * 20 - 10); // ±10%
-      const alpha = Math.random() * 0.4 + 0.1; // شفافية بين 0.1 و 0.5
+     
+      const hueVariation = baseHue + (Math.random() * 30 - 15);
+      const saturation = baseSaturation + (Math.random() * 20 - 10); 
+      const lightness = baseLightness + (Math.random() * 20 - 10); 
+      const alpha = Math.random() * 0.4 + 0.1; 
 
       particles.push({
         x: Math.random() * canvas.width,
@@ -46,11 +44,9 @@ const Hero = () => {
       });
     }
 
-    // دالة الرسم
     const render = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // رسم خطوط متصلة بين الجزيئات القريبة
       for (let i = 0; i < particles.length; i++) {
         for (let j = i; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -59,7 +55,6 @@ const Hero = () => {
 
           if (distance < 150) {
             ctx.beginPath();
-            // استخدام تدرجات من اللون الأساسي للخطوط
             ctx.strokeStyle = `hsla(${baseHue}, ${baseSaturation}%, ${baseLightness}%, ${
               0.2 * (1 - distance / 150)
             })`;
@@ -71,18 +66,15 @@ const Hero = () => {
         }
       }
 
-      // رسم وتحديث الجزيئات
       particles.forEach((p) => {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = p.color;
         ctx.fill();
 
-        // تحديث المواضع
         p.x += p.speedX;
         p.y += p.speedY;
 
-        // الارتداد عند حواف الشاشة
         if (p.x < 0 || p.x > canvas.width) p.speedX = -p.speedX;
         if (p.y < 0 || p.y > canvas.height) p.speedY = -p.speedY;
       });
@@ -138,7 +130,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+      <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
         <div className="w-8 h-12 rounded-full border-2 border-white/40 flex justify-center">
           <div className="w-1 h-2 bg-white rounded-full mt-2 animate-scroll"></div>
         </div>
