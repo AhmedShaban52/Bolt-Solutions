@@ -61,20 +61,6 @@ const Team = () => {
               <p className="text-gray-400 text-sm mt-4 z-10 relative group-hover:text-[#c2f0ed] transition-colors duration-300">
                 {item.description}
               </p>
-
-              <div className="flex gap-3 mt-5 z-10 relative">
-                {item.socialLinks.map((link, linkIndex) => (
-                  <a
-                    key={linkIndex}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-[#38b2ac] transition-colors duration-300 text-xl"
-                  >
-                    {link.icon}
-                  </a>
-                ))}
-              </div>
             </div>
           ))}
         </div>

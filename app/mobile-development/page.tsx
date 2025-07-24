@@ -86,12 +86,12 @@ const Page = () => {
         <div className="text-center mt-16">
           <Link
             href="/"
-            className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-transparent border border-[#269ca1] rounded-lg hover:bg-[#269ca1] transition-colors duration-300 group"
+            className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-transparent border border-[#269ca1] rounded-xl hover:bg-[#269ca1] transition-colors duration-500 group hover:shadow-[0_0_15px_rgba(38,156,161,0.4)] cursor-pointer"
           >
-            <span>←</span>
-            <span className="ml-2 group-hover:ml-3 transition-all">
-              Back to Home
+            <span className="mr-2  group-hover:-translate-x-1 transition-transform duration-300 relative bottom-0.5">
+              ←
             </span>
+            <span>Back to Home</span>
           </Link>
         </div>
       </div>

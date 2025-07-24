@@ -12,9 +12,14 @@ import mob1 from "../assets/mob1.jpeg";
 import mob2 from "../assets/mob2.jpeg";
 import mob3 from "../assets/mob3.jpeg";
 
-import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
+import slide from "../assets/slide.jpeg";
+import slide2 from "../assets/slide2.jpeg";
+import slide3 from "../assets/slide3.jpeg";
+import slide4 from "../assets/slide4.jpeg";
+import slide5 from "../assets/slide5.jpeg";
+import slide6 from "../assets/slide6.jpeg";
+
 import { MdPhoneIphone } from "react-icons/md";
-import { FaBehanceSquare } from "react-icons/fa";
 
 export const principles = [
   {
@@ -35,44 +40,17 @@ export const teamMembers = [
   {
     name: "Ahmed Hussein",
     title: "Laravel FullStack Developer",
-    skills: ["Laravel", "PHP", "MySQL", "Docker"],
+    skills: ["Laravel", "PHP", "MySQL", "Docker", "Java Script"],
     description:
       "Specializes in building robust backend systems and scalable web applications.",
-    socialLinks: [
-      { icon: <BsGithub />, url: "#" },
-      { icon: <BsLinkedin />, url: "#" },
-      { icon: <BsFacebook />, url: "#" },
-    ],
   },
-  {
-    name: "Seif Amr",
-    title: "Frontend Developer",
-    skills: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
-    description:
-      "Creates responsive and interactive user interfaces with modern web technologies.",
-    socialLinks: [
-      { icon: <BsGithub />, url: "#" },
-      { icon: <BsLinkedin />, url: "#" },
-      { icon: <BsFacebook />, url: "#" },
-    ],
-  },
+
   {
     name: "Ahmed Shaaban",
     title: ".NET FullStack Developer",
     skills: [".NET Core", "C#", "SQL Server", "Next.js"],
     description:
       "Expert in enterprise application development with Microsoft technologies.",
-    socialLinks: [
-      { icon: <BsGithub />, url: "https://github.com/AhmedShaban52" },
-      {
-        icon: <BsLinkedin />,
-        url: "https://www.linkedin.com/in/ahmed-shaaban52/",
-      },
-      {
-        icon: <BsFacebook />,
-        url: "https://www.facebook.com/ahmed.shaaban522000",
-      },
-    ],
   },
   {
     name: "Manar Samhy",
@@ -80,11 +58,6 @@ export const teamMembers = [
     skills: ["Adobe Photoshop", "Illustrator", "AdobeXD", "Adode InDesign"],
     description:
       "Transforms complex problems into intuitive and beautiful design solutions.",
-    socialLinks: [
-      { icon: <FaBehanceSquare />, url: "https://www.behance.net/manar-mohamed" },
-      { icon: <BsLinkedin />, url: "#" },
-      { icon: <BsFacebook />, url: "#" },
-    ],
   },
   {
     name: "Yousef Mahmoud",
@@ -92,11 +65,6 @@ export const teamMembers = [
     skills: ["Flutter", "Dart", "Firebase", "REST APIs"],
     description:
       "Builds cross-platform mobile applications with excellent performance.",
-    socialLinks: [
-      { icon: <BsGithub />, url: "#" },
-      { icon: <BsLinkedin />, url: "#" },
-      { icon: <BsFacebook />, url: "#" },
-    ],
   },
   {
     name: "Karrem Alaa",
@@ -104,11 +72,6 @@ export const teamMembers = [
     skills: ["State Management", "Flutter", "Firebase", "App Store"],
     description:
       "Creates native-like experiences with React Native and modern tools.",
-    socialLinks: [
-      { icon: <BsGithub />, url: "#" },
-      { icon: <BsLinkedin />, url: "#" },
-      { icon: <BsFacebook />, url: "#" },
-    ],
   },
 ];
 
@@ -130,7 +93,7 @@ export const cards = [
     technologies: ["React Native", "Flutter", "Swift", "Kotlin"],
   },
   {
-    href: "ui-design",
+    href: "graphic-design",
     title: "UI/UX Design / Graphic-Design",
     description:
       "Create intuitive and beautiful user interfaces that enhance user engagement and provide exceptional digital experiences.",
@@ -238,5 +201,67 @@ export const contactDetails = [
     icon: <FaPhone className="text-blue-700" size={20} />,
     title: "Phone",
     value: "+20 1155414805",
+  },
+];
+
+export const graphicDesigns = [
+  {
+    id: 1,
+    title: "Tech Startup Brand Identity",
+    description:
+      "Complete brand identity for a tech startup including logo, color palette, and guidelines.",
+    image: slide,
+    category: "Brand Identity",
+    client: "Nexus Technologies",
+    year: "2023",
+  },
+  {
+    id: 2,
+    title: "Coffee Shop Packaging",
+    description:
+      "Packaging design for premium coffee beans with sustainable materials.",
+    image: slide2,
+    category: "Packaging",
+    client: "Brew Haven",
+    year: "2022",
+  },
+  {
+    id: 3,
+    title: "Fitness Apparel Logo",
+    description:
+      "Modern and energetic logo design for a fitness apparel brand.",
+    image: slide3,
+    category: "Logo Design",
+    client: "ActiveWear Co.",
+    year: "2023",
+  },
+  {
+    id: 4,
+    title: "Restaurant Menu Design",
+    description:
+      "Elegant menu design for a fine dining restaurant with custom illustrations.",
+    image: slide4,
+    category: "Print Design",
+    client: "La Belle Cuisine",
+    year: "2022",
+  },
+  {
+    id: 5,
+    title: "Social Media Campaign",
+    description: "Complete social media assets for a product launch campaign.",
+    image: slide5,
+    category: "Social Media",
+    client: "Glow Beauty",
+    year: "2023",
+  },
+  {
+    id: 6,
+    title: "Corporate Brand Refresh",
+    description:
+      "Brand refresh for a financial services company with updated visual identity.",
+    image: slide6,
+    category: "Brand Identity",
+    client: "Capital Trust",
+    year: "2022",
   },
 ];
