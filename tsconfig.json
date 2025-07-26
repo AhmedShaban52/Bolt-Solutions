@@ -28,8 +28,9 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/Contact.jsx", "components/Footer.jsx", "components/About.jsx", "components/Hero.jsx", "components/Navbar.jsx", "components/NavbarLinks.jsx", "components/Projects.jsx", "components/Team.jsx"  ],
   "exclude": [
     "node_modules"
   ]
+  
 }
