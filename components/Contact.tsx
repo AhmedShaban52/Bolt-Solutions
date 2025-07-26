@@ -20,6 +20,7 @@ const Contact = () => {
     },
   };
 
+  // تم التصحيح هنا: إزالة duration غير المتوافقة مع spring
   const item = {
     hidden: {
       y: 30,
@@ -32,7 +33,6 @@ const Contact = () => {
         type: "spring",
         damping: 15,
         stiffness: 80,
-        duration: 1.5,
       },
     },
   };
@@ -51,6 +51,7 @@ const Contact = () => {
     },
   };
 
+  // تم التصحيح هنا: تغيير النوع إلى tween مع duration
   const formItem = {
     hidden: {
       y: 20,
@@ -60,7 +61,7 @@ const Contact = () => {
       y: 0,
       opacity: 1,
       transition: {
-        type: "tween",
+        type: "tween", // تغيير من spring إلى tween
         ease: "easeOut",
         duration: 1.2,
       },
@@ -164,12 +165,6 @@ const Contact = () => {
                 className="flex justify-start gap-3 sm:gap-4 pt-2 sm:pt-4"
                 variants={container}
               >
-                {/* <Link
-                  href="#"
-                  className="inline-flex items-center text-text-primary justify-center p-1.5 sm:p-2 text-xs sm:text-sm font-medium transition-colors rounded-full border border-white/30 hover:bg-white/10 cursor-pointer hover:border-[#269CA1] hover:text-[#269CA1] duration-300"
-                >
-                  <AiFillGithub size={18} />
-                </Link> */}
                 <Link
                   href="https://www.instagram.com/dodixtech?igsh=azBhZDlra3IycWx1"
                   target="_blank"
@@ -177,18 +172,6 @@ const Contact = () => {
                 >
                   <FaInstagram size={18} />
                 </Link>
-                {/* <Link
-                  href="#"
-                  className="inline-flex items-center text-text-primary justify-center p-1.5 sm:p-2 text-xs sm:text-sm font-medium transition-colors rounded-full border border-white/30 hover:bg-white/10 cursor-pointer hover:border-[#269CA1] hover:text-[#269CA1] duration-300"
-                >
-                  <IoLogoLinkedin size={18} />
-                </Link> */}
-                {/* <Link
-                  href="#"
-                  className="inline-flex items-center text-text-primary justify-center p-1.5 sm:p-2 text-xs sm:text-sm font-medium transition-colors rounded-full border border-white/30 hover:bg-white/10 cursor-pointer hover:border-[#269CA1] hover:text-[#269CA1] duration-300"
-                >
-                  <MdEmail size={18} />
-                </Link> */}
               </motion.div>
             </div>
           </div>
