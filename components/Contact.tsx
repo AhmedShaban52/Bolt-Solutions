@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import { contactDetails } from "../data/data";
 import { AiFillGithub } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa6";
@@ -8,6 +10,63 @@ import { BsSendFill } from "react-icons/bs";
 import Link from "next/link";
 
 const Contact = () => {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.4,
+      },
+    },
+  };
+
+  const item = {
+    hidden: {
+      y: 30,
+      opacity: 0,
+    },
+    show: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        damping: 15,
+        stiffness: 80,
+        duration: 1.5,
+      },
+    },
+  };
+
+  const lineItem = {
+    hidden: {
+      width: 0,
+    },
+    show: {
+      width: "12rem",
+      transition: {
+        type: "tween",
+        ease: "easeOut",
+        duration: 2.0,
+      },
+    },
+  };
+
+  const formItem = {
+    hidden: {
+      y: 20,
+      opacity: 0,
+    },
+    show: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "tween",
+        ease: "easeOut",
+        duration: 1.2,
+      },
+    },
+  };
+
   return (
     <section
       id="contact"
@@ -19,34 +78,66 @@ const Contact = () => {
       <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full border-4 border-[#269ca1]/10"></div>
 
       <div className="container w-5/6 mx-auto relative z-10">
-        <div className="text-center">
-          <h1 className="text-white text-2xl md:text-5xl font-bold mb-2.5">
+        <motion.div
+          className="text-center"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          <motion.h1
+            className="text-white text-2xl md:text-5xl font-bold mb-2.5"
+            variants={item}
+          >
             Get In <span className="text-[#269CA1]">Touch</span>
-          </h1>
-          <div className="mx-auto w-48 md:w-80 h-1 bg-gradient-to-r from-[#269CA1] to-transparent mb-2"></div>
-          <p className="text-lg md:text-xl text-gray-400">
+          </motion.h1>
+
+          <motion.div
+            className="mx-auto w-48 md:w-80 h-1 bg-gradient-to-r from-[#269CA1] to-transparent mb-2"
+            variants={lineItem}
+          ></motion.div>
+
+          <motion.p
+            className="text-lg md:text-xl text-gray-400"
+            variants={item}
+          >
             Group of Engineers, Developers, And Designers Dedicated to
             Delivering Excellence.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 pt-20">
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 pt-20"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           <div className="relative">
             <div className="absolute hidden md:block -top-8 -right-5 w-28 h-40 sm:h-40 rounded-full bg-[#269ca1]/10 filter blur-xl opacity-50 animate-float3" />
 
-            <h3 className="text-xl sm:text-2xl font-semibold text-text-primary">
+            <motion.h3
+              className="text-xl sm:text-2xl font-semibold text-text-primary"
+              variants={item}
+            >
               Contact Information
-            </h3>
-            <p className="text-sm sm:text-base text-gray-500 pt-5">
+            </motion.h3>
+
+            <motion.p
+              className="text-sm sm:text-base text-gray-500 pt-5"
+              variants={item}
+            >
               Feel free to reach out to me through any of the following methods.
               Im always open to discussing new projects, creative ideas, or
               opportunities.
-            </p>
+            </motion.p>
+
             <div className="pt-8">
               {contactDetails.map((item, index) => (
-                <div
+                <motion.div
                   key={index}
                   className="flex items-start gap-3 sm:gap-4 mb-8 group"
+                  variants={item}
                 >
                   <span className="bg-[#269CA1]/20 p-2 sm:p-3 rounded-full group-hover:bg-[#269CA1]/30 transition-all duration-300">
                     {item.icon}
@@ -57,21 +148,28 @@ const Contact = () => {
                       {item.value}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
 
             <div className="pt-10">
-              <h5 className="text-xl sm:text-2xl font-semibold text-text-primary">
+              <motion.h5
+                className="text-xl sm:text-2xl font-semibold text-text-primary"
+                variants={item}
+              >
                 Follow Me
-              </h5>
-              <div className="flex justify-start gap-3 sm:gap-4 pt-2 sm:pt-4">
-                <Link
+              </motion.h5>
+
+              <motion.div
+                className="flex justify-start gap-3 sm:gap-4 pt-2 sm:pt-4"
+                variants={container}
+              >
+                {/* <Link
                   href="#"
                   className="inline-flex items-center text-text-primary justify-center p-1.5 sm:p-2 text-xs sm:text-sm font-medium transition-colors rounded-full border border-white/30 hover:bg-white/10 cursor-pointer hover:border-[#269CA1] hover:text-[#269CA1] duration-300"
                 >
                   <AiFillGithub size={18} />
-                </Link>
+                </Link> */}
                 <Link
                   href="https://www.instagram.com/dodixtech?igsh=azBhZDlra3IycWx1"
                   target="_blank"
@@ -79,36 +177,50 @@ const Contact = () => {
                 >
                   <FaInstagram size={18} />
                 </Link>
-                <Link
+                {/* <Link
                   href="#"
                   className="inline-flex items-center text-text-primary justify-center p-1.5 sm:p-2 text-xs sm:text-sm font-medium transition-colors rounded-full border border-white/30 hover:bg-white/10 cursor-pointer hover:border-[#269CA1] hover:text-[#269CA1] duration-300"
                 >
                   <IoLogoLinkedin size={18} />
-                </Link>
-                <Link
+                </Link> */}
+                {/* <Link
                   href="#"
                   className="inline-flex items-center text-text-primary justify-center p-1.5 sm:p-2 text-xs sm:text-sm font-medium transition-colors rounded-full border border-white/30 hover:bg-white/10 cursor-pointer hover:border-[#269CA1] hover:text-[#269CA1] duration-300"
                 >
                   <MdEmail size={18} />
-                </Link>
-              </div>
+                </Link> */}
+              </motion.div>
             </div>
           </div>
 
-          <div className="bg-[#161B22] p-5 sm:p-6 md:p-8 rounded-2xl shadow-sm sm:shadow-md border border-gray-700 relative overflow-hidden">
+          <motion.div
+            className="bg-[#161B22] p-5 sm:p-6 md:p-8 rounded-2xl shadow-sm sm:shadow-md border border-gray-700 relative overflow-hidden"
+            variants={item}
+          >
             <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-[#269CA1]/10 animate-pulse"></div>
 
-            <h6 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-text-primary relative z-10">
+            <motion.h6
+              className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-text-primary relative z-10"
+              variants={item}
+            >
               Send Me a Message
-            </h6>
-            <form
+            </motion.h6>
+
+            <motion.form
               action="mailto:dodixtech@gmail.com"
               method="post"
               encType="text/plain"
               className="space-y-4 sm:space-y-6 relative z-10"
+              variants={container}
             >
-              <div className="flex flex-col md:grid md:grid-cols-2 gap-4 sm:gap-6">
-                <div className="col-span-2 md:col-span-1">
+              <motion.div
+                className="flex flex-col md:grid md:grid-cols-2 gap-4 sm:gap-6"
+                variants={container}
+              >
+                <motion.div
+                  className="col-span-2 md:col-span-1"
+                  variants={formItem}
+                >
                   <label
                     htmlFor="name"
                     className="text-sm font-medium text-text-primary"
@@ -121,8 +233,12 @@ const Contact = () => {
                     className="w-full border border-white/30 mt-2 p-2 pl-4 rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-[#269CA1] duration-500 placeholder-gray-600"
                     placeholder="Your Name"
                   />
-                </div>
-                <div className="col-span-2 md:col-span-1">
+                </motion.div>
+
+                <motion.div
+                  className="col-span-2 md:col-span-1"
+                  variants={formItem}
+                >
                   <label
                     htmlFor="email"
                     className="text-sm font-medium text-text-primary"
@@ -135,9 +251,10 @@ const Contact = () => {
                     className="w-full border border-white/30 mt-2 p-2 pl-4 rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-[#269CA1] duration-500 placeholder-gray-600"
                     placeholder="Your Email"
                   />
-                </div>
-              </div>
-              <div className="w-full col-span-1">
+                </motion.div>
+              </motion.div>
+
+              <motion.div className="w-full col-span-1" variants={formItem}>
                 <label
                   htmlFor="text"
                   className="text-sm font-medium text-text-primary"
@@ -150,8 +267,9 @@ const Contact = () => {
                   className="w-full border border-white/30 mt-2 p-2 pl-4 rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-[#269CA1] duration-500 placeholder-gray-600"
                   placeholder="Your Subject"
                 />
-              </div>
-              <div className="w-full col-span-1">
+              </motion.div>
+
+              <motion.div className="w-full col-span-1" variants={formItem}>
                 <label
                   htmlFor="message"
                   className="text-sm font-medium text-text-primary"
@@ -163,16 +281,24 @@ const Contact = () => {
                   className="w-full px-3 sm:px-4 mt-2 py-1.5 sm:py-2 text-xs sm:text-sm rounded-md border border-white/30 focus:outline-none focus:ring-2 focus:ring-[#269CA1] duration-500 text-text-primary min-h-[100px] sm:min-h-[150px] bg-transparent placeholder-gray-600"
                   placeholder="Write your message here..."
                 />
-              </div>
-              <button className="w-full px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm bg-gradient-to-r from-[#269CA1] to-[#1D8A8F] text-white font-medium rounded-lg hover:from-[#1D8A8F] hover:to-[#14777B] transition-all transform  duration-500 shadow shadow-[#269CA1]/30 flex items-center justify-center cursor-pointer group relative overflow-hidden">
-                <span className="absolute inset-0 bg-gradient-to-r from-[#1D8A8F] to-[#14777B] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              </motion.div>
+
+              <motion.button
+                className="w-full px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm bg-gradient-to-r from-[#269CA1] to-[#1D8A8F] text-white font-medium rounded-lg hover:from-[#1D8A8F] hover:to-[#14777B] transition-all transform  duration-500 shadow shadow-[#269CA1]/30 flex items-center justify-center cursor-pointer group relative overflow-hidden"
+                variants={formItem}
+                whileTap={{
+                  scale: 0.98,
+                  transition: { duration: 0.3 },
+                }}
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-[#1D8A8F] to-[#14777B] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                 <span className="relative z-10 flex items-center">
                   <BsSendFill size={18} className="mr-2" /> Send Message
                 </span>
-              </button>
-            </form>
-          </div>
-        </div>
+              </motion.button>
+            </motion.form>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

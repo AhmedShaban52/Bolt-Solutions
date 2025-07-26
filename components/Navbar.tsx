@@ -8,6 +8,7 @@ import logo from "../assets/logo4.png";
 import Link from "next/link";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { socialLinksNav } from "../data/data";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -89,32 +90,18 @@ const Navbar = () => {
           </div>
 
           {/* Contact Button - Mobile */}
-          <div className="flex space-x-4 pt-2.5">
-            <Link
-              href="#"
-              className="bg-[#1a2a3a] hover:bg-[#269ca1] w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
-            >
-              <AiFillGithub className="text-white text-lg" />
-            </Link>
-            <Link
-              href="#"
-              className="bg-[#1a2a3a] hover:bg-[#269ca1] w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
-            >
-              <FaLinkedinIn className="text-white text-lg" />
-            </Link>
-            <Link
-              href="https://www.instagram.com/dodixtech?igsh=azBhZDlra3IycWx1"
-              target="_blank"
-              className="bg-[#1a2a3a] hover:bg-[#269ca1] w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
-            >
-              <FaInstagram className="text-white text-lg" />
-            </Link>
-            <Link
-              href="#"
-              className="bg-[#1a2a3a] hover:bg-[#269ca1] w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
-            >
-              <AiOutlineTwitter className="text-white text-lg" />
-            </Link>
+          <div className="flex justify-start space-x-4 pt-6">
+            {socialLinksNav.map((item, idx) => (
+              <div key={idx}>
+                <Link
+                  href={item.href}
+                  target={item.external ? "_blank" : "_self"}
+                  className="bg-[#1a2a3a] hover:bg-[#269ca1] w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
+                >
+                  {item.icon}
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       )}

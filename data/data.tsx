@@ -1,4 +1,4 @@
-import { FaLaptopCode } from "react-icons/fa";
+import { FaInstagram, FaLaptopCode, FaLinkedinIn } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
@@ -20,6 +20,42 @@ import slide5 from "../assets/slide5.jpeg";
 import slide6 from "../assets/slide6.jpeg";
 
 import { MdPhoneIphone } from "react-icons/md";
+import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
+
+export const socialLinksNav = [
+  // { icon: <AiFillGithub />, href: "#" },
+  // { icon: <FaLinkedinIn />, href: "#" },
+  {
+    icon: <FaInstagram />,
+    href: "https://www.instagram.com/dodixtech",
+    external: true,
+  },
+  // { icon: <AiOutlineTwitter />, href: "#" },
+];
+
+export const teamInfo = [
+  {
+    icon: "✉️",
+    label: "Email",
+    value: "dodixtech@gmail.com",
+  },
+  {
+    icon: "📍",
+    label: "Location",
+    value: "Cairo, Egypt",
+  },
+  {
+    icon: "🔍",
+    label: "Status",
+    value: "Open to opportunities",
+  },
+];
+
+export const focusPoints = [
+  "Building scalable digital experiences through collaborative software engineering",
+  "Creating responsive cloud-native applications with microservices architecture",
+  "Implementing secure blockchain systems using decentralized network protocols",
+];
 
 export const principles = [
   {
@@ -256,4 +292,21 @@ export const graphicDesigns = [
     client: "Capital Trust",
     year: "2022",
   },
+];
+
+export const bottomLinks = [
+  { label: "Privacy Policy", href: "#" },
+  { label: "Terms of Service", href: "#" },
+  { label: "Cookies", href: "#" },
+];
+
+export const socialLinks = [
+  // { icon: <AiFillGithub />, href: "#" },
+  // { icon: <FaLinkedinIn />, href: "#" },
+  {
+    icon: <FaInstagram />,
+    href: "https://www.instagram.com/dodixtech?igsh=...",
+    external: true,
+  },
+  // { icon: <AiOutlineTwitter />, href: "#" },
 ];
